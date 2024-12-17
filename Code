@@ -1,0 +1,16 @@
+# Prompt the user for their username and password
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+# Trim whitespace from the password
+password = password.strip()
+
+# File to store the username and password
+filename = "password.txt"
+
+# Append the username and password to the file
+with open("password.txt", "a") as file:
+    file.write(username)
+    file.write(password)
+
+print("Your information has been saved.")
